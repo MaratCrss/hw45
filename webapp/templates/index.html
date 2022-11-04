@@ -12,6 +12,7 @@
     <a href="/articles/add/">Добавить задание</a>
     {% for article in articles %}
         <h2>{{ article.title }}</h2>
+        <p>{{ article.status }} - {{ article.get_status_display }}</p>
         <p><a href="/article/?id={{ article.id }}">Подробнее...</a></p>
     {% endfor %}
 </body>
